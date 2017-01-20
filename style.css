@@ -1,0 +1,23 @@
+#section-1 {
+	height: 600px;
+	background-color: pink;
+}
+#section-2 {
+	height: 650px;
+	background-color: yellow;
+}
+#section-3 {
+	height: 700px;
+	background-color: red;
+}
+#nav {
+	background-color: white;
+	width: 100%;
+	margin-top: 0;
+}
+
+body {
+	margin-top: 0;
+	background-image: url("banner-img.png");
+    background-color: blue;
+}

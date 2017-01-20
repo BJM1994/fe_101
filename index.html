@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ex 1</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+		
+	        ul {
+    		list-style-type: none;
+    		margin: 0;
+    		padding: 0;
+    		width: 200px;
+    		background-color: #f1f1f1;
+		}	
+
+		li a {
+   		 	display: block;
+    		color: #000;
+    		padding: 8px 16px;
+    		text-decoration: none;
+		}
+
+/* Change the link color on hover */
+		li a:hover {
+    	background-color: #555;
+    	color: white;
+		}		
+	</style>
+
+</head>
+
+<body>
+
+	<ul id="nav">
+	    <li class="current"><a href="#section-1">Section 1</a></li>
+	    <li><a href="#section-2">Section 2</a></li>
+	    <li><a href="#section-3">Section 3</a></li>
+	</ul>
+
+<div class="container">
+
+	<div id="section-1">
+	    <strong>Section 1</strong>
+	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+
+	<div id="section-2">
+	    <strong>Section 2</strong>
+	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+
+	<div id="section-3">
+	    <strong>Section 3</strong>
+	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.nav.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+	
+</script>
+	<script type="text/javascript">
+		$('#nav').onePageNav({
+		    currentClass: 'current',
+		    changeHash: false,
+		    scrollSpeed: 750,
+		    scrollThreshold: 0.5,
+		    filter: '',
+		    easing: 'swing',
+		    begin: function() {
+		        //I get fired when the animation is starting
+		    },
+		    end: function() {
+		        //I get fired when the animation is ending
+		    },
+		    scrollChange: function($currentListItem) {
+		        //I get fired when you enter a section and I pass the list item of the section
+		    }
+		});
+
+		$(document).ready(function(){ 
+			$(window).scroll(function(){ 
+				$("#nav").css("position", "fixed") 
+	        })
+        })
+
+	</script>
+
+</body>
+</html>
